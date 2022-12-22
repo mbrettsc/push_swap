@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:44:47 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/22 00:38:02 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 00:48:09 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_swap_ab(t_struct **stackA, t_struct **stackB);
 // SORT
 void	ft_small_sort(t_struct **stackA, t_struct **stackB, int ac);
 void    ft_main_sort(t_struct **stackA, t_struct **stackB, int ac);
-
+void    free_double(char **s);
 void	ft_sort_three(t_struct **stackA);
 void	push_other_three(t_struct **stackA, int *nums);
 void	ft_sort_four(t_struct **stackA, t_struct **stackB);

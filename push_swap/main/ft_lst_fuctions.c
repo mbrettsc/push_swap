@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 21:53:17 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/22 03:42:42 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 01:37:36 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,19 @@ void	ft_lst_free(t_struct **stackA)
 
 #include "stdio.h"
 
+void free_double(char **s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		free (s[i]);
+		i++;
+	}
+	free (s);
+}
+
 t_struct	*ft_lst_fill(char **av, int ac)
 {
 	int 		i;
@@ -77,9 +90,7 @@ t_struct	*ft_lst_fill(char **av, int ac)
 	head = NULL;
 	i = 0;
 	if (ac == 2)
-	{
 		tab	= ft_split(av[1], ' ');
-	}
 	else
 	{
 		i = 1;
@@ -96,6 +107,8 @@ t_struct	*ft_lst_fill(char **av, int ac)
 		ft_lstadd_back(&head, tmp);
 		i++;
 	}
+	if (ac == 2)
+		free_double(tab);
 	add_index(&head);
 	return (head);
 }

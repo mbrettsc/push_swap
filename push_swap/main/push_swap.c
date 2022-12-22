@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 01:52:21 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/22 01:25:38 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/22 23:42:10 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,15 @@ void	ft_radix_sort(t_struct **stackA, t_struct **stackB)
 		i++;
 	}	
 }
-
+#include <stdio.h>
 void ft_main_sort(t_struct **stackA, t_struct **stackB, int ac)
 {
-	if (ac == 1 && (*stackA)->next != NULL)
+	int i = ft_lstsize(*stackA);	
+	
+	if ((ac == 1 && (*stackA)->next != NULL) && i > 5)
 		ft_radix_sort(stackA, stackB);
+	else if	((ac == 1 && (*stackA)->next != NULL) && i <= 5)
+		ft_small_sort(stackA, stackB, i);
 	else if (ac <= 5)
 		ft_small_sort(stackA, stackB, ac);
 	else

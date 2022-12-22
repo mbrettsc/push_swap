@@ -6,13 +6,13 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 06:00:27 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/22 03:38:19 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 01:34:57 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 #include <limits.h>
-
+#include <stdio.h>
 int		*ft_to_arr(char **n, int size)
 {
 	int *arr;
@@ -107,5 +107,7 @@ int	ft_arg_check (char **n, int ac)
 	}
 	if (ft_dup_check(tab, i - 1) == 0)
 		return (0);
+	if (ac == 2)
+		free_double(tab);
 	return (1);
 }
