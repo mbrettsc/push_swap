@@ -65,8 +65,6 @@ void	ft_lst_free(t_struct **stackA)
 	}
 }
 
-#include "stdio.h"
-
 void free_double(char **s)
 {
 	int i;
