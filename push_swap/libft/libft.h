@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:05:14 by iyapar            #+#    #+#             */
-/*   Updated: 2022/12/21 01:24:31 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/21 22:23:12 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_struct
 
 bool		ft_isdigit(int n);
 
+char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *str);
 long 	ps_atoll(const char *str);
 

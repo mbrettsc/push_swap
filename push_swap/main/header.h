@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:44:47 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/21 01:46:52 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/22 00:38:02 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 // CHECKS
-int	    ft_arg_check (char **n);
+int	ft_arg_check (char **n, int ac);
 int		ft_is_sorted(t_struct *stackA);
 int		ft_dup_check(char **n, int size);
 int		*ft_to_arr(char **n, int size);

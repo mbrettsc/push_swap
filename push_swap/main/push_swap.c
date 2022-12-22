@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbrettsc <mbrettsc@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 01:52:21 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/21 05:53:28 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/22 01:25:38 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,9 @@ void	ft_radix_sort(t_struct **stackA, t_struct **stackB)
 
 void ft_main_sort(t_struct **stackA, t_struct **stackB, int ac)
 {
-	if (ac <= 5)
+	if (ac == 1 && (*stackA)->next != NULL)
+		ft_radix_sort(stackA, stackB);
+	else if (ac <= 5)
 		ft_small_sort(stackA, stackB, ac);
 	else
 		ft_radix_sort(stackA, stackB);	

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checks.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbrettsc <mbrettsc@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 06:00:27 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/21 06:02:46 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/22 03:38:19 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,21 +78,25 @@ void	ft_max_min_check(char *a)
 	return ;
 }
 
-int	ft_arg_check (char **n)
+int	ft_arg_check (char **n, int ac)
 {
 	int i;
 	int j;
+	char **tab;
 
 	i = 1;
-	while (n[i])
+	if (ac == 2)
+		tab = ft_split(n[1], ' ');
+	else	 		
+		tab = n;
+	while (tab[i])
 	{
-		ft_max_min_check(n[i]);
 		j = 0;
-		while (n[i][j] != '\0')
+		while (tab[i][j] != '\0')
 		{
-			if (n[i][j] == '+' || n[i][j] == '-')
+			if (tab[i][j] == '+' || tab[i][j] == '-')
 				j++;
-			if (!ft_isdigit(n[i][j]))
+			if (!ft_isdigit(tab[i][j]))
 			{
 				write (1, "Error\n", 6);
 				return (0);
@@ -101,7 +105,7 @@ int	ft_arg_check (char **n)
 		}
 		i++;
 	}
-	if (ft_dup_check(n, i - 1) == 0)
+	if (ft_dup_check(tab, i - 1) == 0)
 		return (0);
 	return (1);
 }

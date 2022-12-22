@@ -5,6 +5,7 @@ SRC = ft_atoi.c ft_isdigit.c ft_lstnew.c \
 	ft_lstsize.c\
 	ft_lstlast.c \
 	ft_lstadd_back.c \
+	ft_split.c \
 
 all: $(NAME)
 

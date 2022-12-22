@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbrettsc <mbrettsc@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 05:35:04 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/21 06:04:46 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/22 04:01:51 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int ac, char **av)
     t_struct    *stackA;
     t_struct    *stackB;
     
-    if (ac > 1 && ft_arg_check(av))
+    if (ac > 1 && ft_arg_check(av, ac))
     {
         stackB = NULL;
         stackA = ft_lst_fill(av, ac);
@@ -26,6 +26,6 @@ int main(int ac, char **av)
             ft_lst_free(&stackA);
             return (0);
         }
-        ft_main_sort(&stackA, &stackB, (ac - 1));
+        ft_main_sort(&stackA, &stackB, (ac - 1));    
     }
 }
