@@ -92,5 +92,7 @@ int	ft_arg_check(char **n, int ac)
 	i = find_index(ac);
 	j = arg_check_other(tab, i);
 	ft_dup_check(tab, j, ac);
+	if (ac == 2)
+		free_double(tab);
 	return (1);
 }
