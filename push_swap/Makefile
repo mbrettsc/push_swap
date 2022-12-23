@@ -2,7 +2,7 @@ NAME = push_swap
 
 CFILES = main/main.c rules/ft_push_op.c rules/ft_swap_op.c rules/ft_rot_op.c rules/ft_rev_rot_op.c \
 		small_sorts/ft_push_small_a.c small_sorts/ft_sort_five.c small_sorts/ft_sort_three.c \
-		small_sorts/ft_sort_four.c main/ft_checks.c main/ft_lst_fuctions.c main/push_swap.c 
+		small_sorts/ft_sort_four.c main/ft_checks.c main/ft_lst_fuctions.c main/push_swap.c main/ft_utils.c 
 	
 OBJECTS = $(CFILES:.c=.o)
 

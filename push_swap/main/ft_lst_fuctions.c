@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 21:53:17 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/23 01:37:36 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 03:23:19 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static t_struct	*get_next_min(t_struct **stackA)
 void	add_index(t_struct **stackA)
 {
 	t_struct	*head;
-	int				i;
+	int			i;
 
 	i = 0;
 	head = get_next_min(stackA);
@@ -65,35 +65,16 @@ void	ft_lst_free(t_struct **stackA)
 	}
 }
 
-void free_double(char **s)
-{
-	int i;
-
-	i = 0;
-	while (s[i])
-	{
-		free (s[i]);
-		i++;
-	}
-	free (s);
-}
-
 t_struct	*ft_lst_fill(char **av, int ac)
 {
-	int 		i;
-	t_struct 	*head;
+	int			i;
+	t_struct	*head;
 	t_struct	*tmp;
-	char 		**tab;
+	char		**tab;
 
 	head = NULL;
-	i = 0;
-	if (ac == 2)
-		tab	= ft_split(av[1], ' ');
-	else
-	{
-		i = 1;
-		tab = av;
-	}	
+	tab = add_av(av, ac);
+	i = find_index(ac);
 	while (tab[i])
 	{
 		tmp = ft_lstnew(ft_atoi(tab[i]));

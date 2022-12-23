@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 03:55:31 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/20 03:10:49 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 03:09:37 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_sort_five(t_struct **stackA, t_struct **stackB)
 {
-	int flag;
+	int	flag;
 
 	flag = 0;
 	ft_push_small_a(stackA, stackB, flag);

@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 02:54:12 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/22 03:45:25 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:50:21 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_rev_rot_a(t_struct **stackA)
 	ft_lstadd_back(&new, *stackA);
 	*stackA = new;
 	write(1, "rra\n", 4);
-	while (1);
 }
 
 void	ft_rev_rot_b(t_struct **stackB)
@@ -65,7 +64,6 @@ void	ft_rev_rot_b(t_struct **stackB)
 	ft_lstadd_back(&new, *stackB);
 	*stackB = new;
 	write(1, "rrb\n", 4);
-	while (1);
 }
 
 void	ft_rev_rot_ab(t_struct **stackA, t_struct **stackB)

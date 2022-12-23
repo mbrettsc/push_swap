@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	return (tmp * sign);
 }
 
-long ps_atoll(const char *str)
+long	ps_atoll(const char *str)
 {
 	long	i;
 	long	sign;
@@ -62,4 +62,3 @@ long ps_atoll(const char *str)
 	}
 	return (tmp * sign);
 }
-

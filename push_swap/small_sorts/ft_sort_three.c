@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 01:57:44 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/18 02:58:32 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 03:09:06 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	push_other_three(t_struct **stackA, int *nums)
 		ft_swap_a(stackA);
 	}
 	else if (nums[0] < nums[1] && nums[1] > nums[2]
-			&& nums[0] < nums[2])
+		&& nums[0] < nums[2])
 	{
 		ft_rev_rot_a(stackA);
 		ft_swap_a(stackA);
@@ -41,10 +41,10 @@ void	ft_sort_three(t_struct **stackA)
 		head = head->next;
 		i++;
 	}
-	if (nums[0] > nums[1] && nums[1] < nums[2] 
+	if (nums[0] > nums[1] && nums[1] < nums[2]
 		&& nums[0] < nums[2])
 		ft_swap_a(stackA);
-	else if (nums[0] < nums[1] && nums[1] > nums[2] 
+	else if (nums[0] < nums[1] && nums[1] > nums[2]
 		&& nums[0] > nums[2])
 		ft_rev_rot_a(stackA);
 	else if (nums[0] > nums[1] && nums[1] < nums[2]

@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 02:00:09 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/22 03:47:03 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 03:09:48 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_push_small_a(t_struct **stackA, t_struct **stackB, int flag)
 {
-	t_struct *head;
+	t_struct	*head;
 
 	head = *stackA;
 	while (head->next != NULL)
