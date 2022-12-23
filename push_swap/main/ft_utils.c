@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 03:01:49 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/23 03:34:23 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 06:35:48 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,23 +47,22 @@ char	**add_av(char **av, int ac)
 	return (tab);
 }
 
-int	ext_arg(char **tab)
+int	arg_check_other(char **tab, int i)
 {
-	int	i;
 	int	j;
 
-	i = 1;
 	while (tab[i])
 	{
+		ft_max_min_check(tab[i]);
 		j = 0;
 		while (tab[i][j] != '\0')
 		{
-			if (tab[i][j] == '+' || tab[i][j] == '-')
+			if (tab[i][j] == '-' || tab[i][j] == '+')
 				j++;
 			if (!ft_isdigit(tab[i][j]))
 			{
-				write (1, "Error\n", 6);
-				return (0);
+				write(1, "Error\n", 6);
+				exit (1);
 			}
 			j++;
 		}

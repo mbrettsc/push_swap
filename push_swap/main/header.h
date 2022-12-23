@@ -6,7 +6,7 @@
 /*   By: mbrettsc <mbrettsc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:44:47 by mbrettsc          #+#    #+#             */
-/*   Updated: 2022/12/23 03:28:59 by mbrettsc         ###   ########.fr       */
+/*   Updated: 2022/12/23 06:29:21 by mbrettsc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void		ft_lst_free(t_struct **stackA);
 // CHECKS
 int			ft_arg_check(char **n, int ac);
 int			ft_is_sorted(t_struct *stackA);
-int			ft_dup_check(char **n, int size);
-int			*ft_to_arr(char **n, int size);
+int			ft_dup_check(char **n, int size, int ac);
+int			*ft_to_arr(char **n, int size, int ac);
 void		ft_max_min_check(char *a);
 
 // RULES
@@ -61,5 +61,6 @@ char		**add_av(char **av, int ac);
 void		add_index(t_struct **stackA);
 int			find_index(int ac);
 int			ext_arg(char **tab);
+int			arg_check_other(char **tab, int i);
 
 #endif
