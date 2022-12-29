@@ -17,16 +17,16 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(LIBFT)
-		make -C $(LIBFT)
+		@make -C $(LIBFT)
 		@(gcc $(CFLAGS) $(OBJECTS) $(LIBFTM) -o $(NAME))
 
 clean: pic
 		@rm -f $(OBJECTS)
-		make clean -C $(LIBFT)
+		@make clean -C $(LIBFT)
 		@echo "Objects files deleted"
 
 fclean: clean
-		make fclean -C $(LIBFT)
+		@make fclean -C $(LIBFT)
 		@rm -rf $(NAME)
 		@echo "Archive file deleted"
 

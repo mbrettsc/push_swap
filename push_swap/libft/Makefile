@@ -10,12 +10,12 @@ SRC = ft_atoi.c ft_isdigit.c ft_lstnew.c \
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) -c $(SRC)
-	ar rc $(NAME) *.o
+	@gcc $(FLAG) -c $(SRC)
+	@ar rc $(NAME) *.o
 clean:
-	rm -f  *.o
+	@rm -f  *.o
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
